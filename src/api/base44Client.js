@@ -132,10 +132,9 @@ export const base44 = {
   entities,
   auth: {
     async me() {
-      let user = getCurrentUser();
+      const user = getCurrentUser();
       if (!user) {
-        user = defaultAdmin;
-        setCurrentUser(user);
+        throw new Error('Authentication required');
       }
       return user;
     },
