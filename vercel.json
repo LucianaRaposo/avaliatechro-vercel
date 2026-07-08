@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "installCommand": "corepack enable && pnpm install --no-frozen-lockfile",
-  "buildCommand": "corepack enable && pnpm run build",
+  "installCommand": "npm install --no-audit --no-fund",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
     {
